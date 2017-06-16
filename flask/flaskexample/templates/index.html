@@ -11,44 +11,39 @@
   <body>
     <h1>Cough Checker</h1>
 
-    <p>An accessbile tool to check your cough symptoms and know your health status</p>
-
-    <h2>What symptoms do you have?</h2>
+    <p>An accessbile tool to check your cough-related symptoms and know your health status.</p>
 
     <form action="/result" method="post">
-
+    <h2>Type of your symptoms:</h2>
       <div class="button">
-              Question 1: describe your situation:<br>
-        <input type="radio" name="q1" value="1" checked> new problem<br>
-        <input type="radio" name="q1" value="2" > chronic problem, routine<br>
-        <input type="radio" name="q1" value="3" > chronic problem, flare-up<br>
-        <input type="radio" name="q1" value="5" > post surgery<br>
-        <input type="radio" name="q1" value="9"> others
+        <input type="radio" name="q0" value="0"> new problem<br>
+        <input type="radio" name="q1" value="1" > chronic problem, routine<br>
+        <input type="radio" name="q2" value="1" > chronic problem, flare-up<br>
+        <input type="radio" name="q0" value="0" > others<br>
       </div>
 
-      <div class="button">
-              Question 2: do you currently have asthma?<br>
-        <input type="radio" name="q2" value="1" checked> yes<br>
-        <input type="radio" name="q2" value="0"> no
-      </div>
-
-      <div class="button">
-              Question 3: do you currently have COPD?<br>
-        <input type="radio" name="q3" value="1" checked> yes<br>
-        <input type="radio" name="q3" value="0"> no
-      </div>
-      <div class="button">
-              Question 4: do you have nasal congestion?<br>
-        <input type="radio" name="q4" value="1" checked> yes<br>
-        <input type="radio" name="q4" value="0"> no
-      </div>
-      <div class="button">
-              Question 5: do you have sore throat?<br>
-        <input type="radio" name="q5" value="1" checked> yes<br>
-        <input type="radio" name="q5" value="0"> no
-      </div>
-
+      <div>
+    <h2>What symptoms or conditions do you currently have? Select all that apply.</h2>
+  		<input type="checkbox" name="q3" value="1"> Cerebrovascular disease/History of stroke or transient ischemic attack <br>
+  		<input type="checkbox" name="q4" value="1"> General weakness<br>
+        <input type="checkbox" name="q5" value="1"> General ill feeling<br>
+        <input type="checkbox" name="q6" value="1"> Chest discomfort, pressure, tightness, heaviness <br>
+        <input type="checkbox" name="q7" value="1"> Facial pain (jaw pain, pain over eye)<br>
+        <input type="checkbox" name="q8" value="1"> Insomnia (can't sleep, sleeplessness, trouble falling asleep)<br>
+        <input type="checkbox" name="q9" value="1"> Apnea/Sleep apnea<br>
+        <input type="checkbox" name="q10" value="1"> Smoking problems (can't quit smoking, smoking too much)<br>
+        <input type="checkbox" name="q11" value="1"> Itchy eyes<br>
+        <input type="checkbox" name="q12" value="1"> Nasal congestion<br>
+        <input type="checkbox" name="q13" value="1"> Shortness of breath (breathlessness, out of breath, sensation of suffocation)<br>
+        <input type="checkbox" name="q14" value="1"> Wheezing/sighing respiration<br>
+        <input type="checkbox" name="q15" value="1"> Disorders of respiratory sound (abnormal breathing sounds, snoring, rales, rattles, stridor)<br>
+  		<input type="checkbox" name="q16" value="1"> vomiting (can't keep food down, dry heaves, retching, throwing up)<br>
+        <input type="checkbox" name="q17" value="1"> Stomach and abdominal pain, cramps and spasms<br>
+        <input type="checkbox" name="q18" value="1"> Constipation<br>
+        <input type="checkbox" name="q19" value="1"> Back pain, ache, soreness, discomfort<br>
+        <input type="checkbox" name="q20" value="1"> Lower pain, ache, soreness, discomfort <br>
       <input type="submit" value="Go check it for me!"></input>
+  </div>
     </form>
   </body>
 </html>
