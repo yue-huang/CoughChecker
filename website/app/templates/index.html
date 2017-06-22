@@ -46,7 +46,7 @@
             <a href="index.html">Home</a>
           </li>
           <li>
-            <a href="about.html">About Me</a>
+            <a href="https://www.linkedin.com/in/huang-yue/">About Me</a>
           </li>
           <li>
             <a href="post.html">Presentation</a>
@@ -70,7 +70,7 @@
           <div class="site-heading">
             <h1>Cough Checker</h1>
             <hr class="small">
-            <span class="subheading">An accessbile tool to check your cough-related symptoms and know your health status</span>
+            <span class="subheading">Check your cough-related symptoms and make informed decisions</span>
           </div>
         </div>
       </div>
@@ -105,13 +105,13 @@
           </div>
           <hr>
 
-          <h2>Are you currently (select all that apply)...:</h2>
+          <h2>Do you ... </h2>
           <div class="questions">
             <div class="left">
-              <div class="question"><input type="checkbox" name="q3" value="1"> Smoking</div>
+              <div class="question"><input type="checkbox" name="q3" value="1"> smoke</div>
             </div>
             <div class="right">
-              <div class="question"><input type="checkbox" name="q8" value="1"> Allergic reactions</div>
+              <div class="question"><input type="checkbox" name="q8" value="1"> have allergic reactions</div>
             </div>
           </div>
           <hr>
@@ -136,12 +136,12 @@
           <h2>Type of your symptoms?</h2>
           <div class="questions">
             <div class="left">
-              <div class="question"><input type="radio" name="q0" value="0"> New problem</div>
-              <div class="question"><input type="radio" name="q4" value="1" > Chronic problem, routine</div>
+              <div class="question"><input id="q4.0" type="radio" name="q4" value="0" > New problem</div>
+              <div class="question"><input id="q4.1" type="radio" name="q4" value="1"> Chronic problem, routine</div>
             </div>
             <div class="right">
-              <div class="question"><input type="radio" name="q5" value="1" > Chronic problem, flare-up</div>
-              <div class="question"><input type="radio" name="q6" value="1" > Others</div>
+              <div class="question" ><input id="q4.2" type="radio" name="q4" value="2" > Chronic problem, flare-up</div>
+              <div class="question"><input id="q4.3" type="radio" name="q4" value="3" > Others</div>
             </div>
           </div>
 
@@ -219,9 +219,12 @@
   if (preset == 'mild') {
     $("input[name='q1']").val(30);
     $("input[name='q14']").attr('checked', true);
-    $("input[name='q0']").attr('checked', true);
+    document.getElementById('q4.0').checked = true;
   } else if (preset == 'severe') {
-    
+    $("input[name='q1']").val(30);
+    document.getElementById('q4.1').checked = true;
+    $("input[name='q12']").attr('checked', true);
+    $("input[name='q15']").attr('checked', true);
   }
   </script>
 </body>
