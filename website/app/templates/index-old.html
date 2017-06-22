@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/main.css" rel="stylesheet"/>
+
+    <title>Cough Checker</title>
+  </head>
+
+  <body>
+    <div class="page-container">
+
+      <div class="container">
+        <h1>Cough Checker</h1>
+
+        <p>An accessbile tool to check your cough-related symptoms and know your health status.</p>
+
+        <p>Call 911 immediately if you have a sudden onset of cough associated with: </p>
+        <p> Severe difficulty breathing, Swollen face and hives, Severe chest pain, Coughing blood.</p>
+        <form action="/result" method="post">
+          <h2>Personal information</h2>
+          <div class="question">
+            Age <input type="text" name="q1"></input>
+          </div>
+          <div class="question">
+            Height (inches) <input type="text" name="q2"></input>
+          </div>
+          <h2>Are you currently... (select all that apply) </h2>
+          <div class="symptoms">
+            <input type="checkbox" name="q3" value="1"> Smoking <br>
+            <input type="checkbox" name="q8" value="1"> Allergic reactions<br>
+          </div>
+          <div class="symptoms">
+            <h2>What symptoms do you have? (select all that apply)</h2>
+      		  <input type="checkbox" name="q14" value="1"> Sore throat<br>
+            <input type="checkbox" name="q7" value="1"> Chest pressure <br>
+            <input type="checkbox" name="q11" value="1"> Shortness of breath <br>
+            <input type="checkbox" name="q12" value="1"> Wheezing<br>
+            <input type="checkbox" name="q13" value="1"> Sneezing<br>
+      		  <input type="checkbox" name="q9" value="1"> Sinus drainage/cyst<br>
+            <input type="checkbox" name="q10" value="1"> Sinus pain/pressure<br>
+            <input type="checkbox" name="q15" value="1"> Vomiting<br>
+          </div>
+        <h2>Type of your symptoms?</h2>
+          <div class="symptoms">
+            <input type="radio" name="q0" value="0"> new problem<br>
+            <input type="radio" name="q4" value="1" > chronic problem, routine<br>
+            <input type="radio" name="q5" value="1" > chronic problem, flare-up<br>
+            <input type="radio" name="q6" value="1" > others<br>
+          </div>
+          <div>
+            <input type="submit" class="btn btn-lg btn-success" value="Go check it for me!"></input>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

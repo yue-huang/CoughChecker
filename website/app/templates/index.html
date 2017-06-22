@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Cough Checker</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme CSS -->
+  <link href="/static/css/clean-blog.min.css" rel="stylesheet">
+
+  <!-- App CSS -->
+  <link href="/static/css/main.css" rel="stylesheet"/>
+
+  <!-- Custom Fonts -->
+  <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          Menu <i class="fa fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About Me</a>
+          </li>
+          <li>
+            <a href="post.html">Presentation</a>
+          </li>
+          <li>
+            <a href="#email">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!-- Page Header -->
+  <!-- Set your background image for this header on the line below. -->
+  <header class="intro-header" style="background-image: url('/static/img/background.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="site-heading">
+            <h1>Cough Checker</h1>
+            <hr class="small">
+            <span class="subheading">An accessbile tool to check your cough-related symptoms and know your health status</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+        <div class="warning">
+          Call 911 immediately if you have a sudden onset of cough associated with:
+          <ul>
+            <li>Severe difficulty breathing</li>
+            <li>Swollen face and hives</li>
+            <li>Severe chest pain</li>
+            <li>Coughing blood</li>
+          </ul>
+        </div>
+
+        <form action="/result" method="post">
+
+          <h2>Personal Information</h2>
+          <div class="questions">
+            <div class="left">
+              <div class="question">Age: <input type="number" name="q1"></input></div>
+            </div>
+            <div class="right">
+              <div class="question">Height (inches): <input type="number" name="q2"></input></div>
+            </div>
+          </div>
+          <hr>
+
+          <h2>Are you currently (select all that apply)...:</h2>
+          <div class="questions">
+            <div class="left">
+              <div class="question"><input type="checkbox" name="q3" value="1"> Smoking</div>
+            </div>
+            <div class="right">
+              <div class="question"><input type="checkbox" name="q8" value="1"> Allergic reactions</div>
+            </div>
+          </div>
+          <hr>
+
+          <h2>What symptoms do you have? (select all that apply)</h2>
+          <div class="questions">
+            <div class="left">
+              <div class="question"><input type="checkbox" name="q14" value="1"> Sore throat</div>
+              <div class="question"><input type="checkbox" name="q7" value="1"> Chest pressure</div>
+              <div class="question"><input type="checkbox" name="q11" value="1"> Shortness of breath</div>
+              <div class="question"><input type="checkbox" name="q12" value="1"> Wheezing</div>
+            </div>
+            <div class="right">
+              <div class="question"><input type="checkbox" name="q13" value="1"> Sneezing</div>
+              <div class="question"><input type="checkbox" name="q9" value="1"> Sinus drainage/cyst</div>
+              <div class="question"><input type="checkbox" name="q10" value="1"> Sinus pain/pressure</div>
+              <div class="question"><input type="checkbox" name="q15" value="1"> Vomiting</div>
+            </div>
+          </div>
+          <hr>
+
+          <h2>Type of your symptoms?</h2>
+          <div class="questions">
+            <div class="left">
+              <div class="question"><input type="radio" name="q0" value="0"> New problem</div>
+              <div class="question"><input type="radio" name="q4" value="1" > Chronic problem, routine</div>
+            </div>
+            <div class="right">
+              <div class="question"><input type="radio" name="q5" value="1" > Chronic problem, flare-up</div>
+              <div class="question"><input type="radio" name="q6" value="1" > Others</div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div>
+            <input type="submit" class="btn btn-lg btn-success" value="Go check it for me!"></input>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <ul class="list-inline text-center">
+            <li>
+              <a id="email" href="mailto:yue.daphne.huang@gmail.com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Cough Checker 2016</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="/static/js/clean-blog.min.js"></script>
+
+  <script>
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  let preset = getParameterByName('preset');
+  if (preset == 'mild') {
+    $("input[name='q1']").val(30);
+    $("input[name='q14']").attr('checked', true);
+    $("input[name='q0']").attr('checked', true);
+  } else if (preset == 'severe') {
+    
+  }
+  </script>
+</body>
+
+</html>
