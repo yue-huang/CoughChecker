@@ -62,14 +62,14 @@
 
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
-  <header class="intro-header" style="background-image: url('/static/img/background.jpg')">
+  <header class="intro-header" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/static/img/background.jpg')">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <div class="site-heading">
             <h1>Cough Checker</h1>
             <hr class="small">
-            <span class="subheading">An accessbile tool to check your cough-related symptoms and know your health status</span>
+            <span class="subheading">Check your cough-related symptoms and make informed decisions</span>
           </div>
         </div>
       </div>
@@ -81,12 +81,12 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div>
-          <p>Based on your symptoms, {{label[0]}} <b>{{label[1]}}</b>{{label[2]}}</p>
-          <p>For your reference, disease frequencies are displayed below.</p>
+          <p>Based on your symptoms, {{label[0]}} <b>{{label[1]}}</b> condition{{label[2]}}</p>
+          <p>You are mostly likely having <b>{{label[3]}}</b>, based on disease frequencies in the {{label[1]}} category, as shown below.</p>
         </div>
 
         <div>
-          <img class="freq-img" src="/static/img/{{label[3]}}">
+          <img class="freq-img" src="/static/img/{{label[4]}}">
         </div>
 
         <div class="warning">

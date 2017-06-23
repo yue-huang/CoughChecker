@@ -12,15 +12,17 @@ def modelIt(user_input, model_file_name = 'app/data/finalized_model.sav'):
     if y_predict == 1:
         label = [
             'sorry that you may have a ',
-            'severe condition',
+            'severe',
             '. Please visit your healthcare provider soon!',
+            'asthma',
             'severe_condition.png'
         ]
     if y_predict == 0:
         label = [
             'good news! You have a ',
-            'mild condition',
+            'mild',
             '. Feel free to recover by yourself. Please keep monitoring your symptoms.',
+            'upper respiratory infection',
             'mild_condition.png'
         ]
     print('the test prob and predicted class are:', testprob, y_predict)
