@@ -4,7 +4,6 @@ def modelIt(user_input, model_file_name = 'app/data/finalized_model.sav'):
     import pickle
     import numpy as np
     user_input[0] = user_input[0]/92
-    user_input[1] = (user_input[1] - 19) / (77 - 19)
     print('Edited user input:',user_input)
     est_loaded = pickle.load(open(model_file_name, 'rb'))
     testprob = est_loaded.predict_proba(np.array([user_input])).item((0,1))

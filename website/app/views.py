@@ -19,29 +19,22 @@ def result():
         user_input.append(92/2)
 
     if request.form.get('q2'):
-        user_input.append(int(request.form.get('q2')))
-    else:
-        user_input.append((77-19)/2)
-
-    if request.form.get('q3'):
         user_input.append(1)
     else:
         user_input.append(0)
 
-    if request.form.get('q4'):
-        symptom_type = int(request.form.get('q4'))
+    if request.form.get('q3'):
+        symptom_type = int(request.form.get('q3'))
         if symptom_type == 1:
-            user_input = user_input + [1,0,0]
+            user_input = user_input + [1,0]
         elif symptom_type == 2:
-            user_input = user_input + [0,1,0]
-        elif symptom_type == 3:
-            user_input = user_input + [0,0,1]
+            user_input = user_input + [0,1]
         else:
-            user_input = user_input + [0,0,0]
+            user_input = user_input + [0,0]
     else:
-        user_input = user_input + [0,0,0]
+        user_input = user_input + [0,0]
 
-    for feature in ['q7','q8','q9','q10','q11','q12','q13','q14','q15']:
+    for feature in ['q4', 'q5', 'q6', 'q7', 'q8', 'q9']:
         if request.form.get(feature):
             user_input.append(1)
         else:
