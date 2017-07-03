@@ -10,17 +10,17 @@ def modelIt(user_input, model_file_name = 'app/data/finalized_model.sav'):
     y_predict = est_loaded.predict(np.array([user_input]))[0]
     if y_predict == 1:
         label = [
-            'sorry that you may have a ',
+            'Caution! ',
             'severe',
-            '. Please visit your healthcare provider soon!',
+            ' Please visit your healthcare provider soon!',
             'asthma',
             'severe_condition.png'
         ]
     if y_predict == 0:
         label = [
-            'good news! You have a ',
+            'Good news!',
             'mild',
-            '. Feel free to recover by yourself. Please keep monitoring your symptoms.',
+            ' Feel free to recover by yourself. Please keep monitoring your symptoms.',
             'upper respiratory infection',
             'mild_condition.png'
         ]
