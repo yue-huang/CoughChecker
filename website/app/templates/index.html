@@ -193,6 +193,7 @@
   <script src="/static/js/clean-blog.min.js"></script>
 
   <script>
+  <!-- Templates -->
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -206,13 +207,13 @@
   let preset = getParameterByName('preset');
   if (preset == 'mild') {
     $("input[name='q1']").val(30);
-    $("input[name='q14']").attr('checked', true);
+    $("input[name='q10']").attr('checked', true);
     document.getElementById('q4.0').checked = true;
   } else if (preset == 'severe') {
     $("input[name='q1']").val(30);
     document.getElementById('q4.1').checked = true;
-    $("input[name='q12']").attr('checked', true);
-    $("input[name='q15']").attr('checked', true);
+    $("input[name='q7']").attr('checked', true);
+    $("input[name='q10']").attr('checked', true);
   }
   </script>
 </body>

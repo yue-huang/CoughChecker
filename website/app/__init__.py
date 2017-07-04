@@ -1,4 +1,4 @@
-# some comment here
+# Initialize flask environment
 
 from flask import Flask
 app = Flask(__name__)

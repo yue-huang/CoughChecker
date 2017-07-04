@@ -1,13 +1,22 @@
-# some comments
+# Predict health condition, the need to see a doctor, and the mostly likely cause for users,
+# based on user's input information using a pre-trained logistic regression predictive model.
 
-def modelIt(user_input, model_file_name = 'app/data/finalized_model.sav'):
+
+def modelIt(user_input, model_file_name='app/data/finalized_model.sav'):
     import pickle
     import numpy as np
-    user_input[0] = user_input[0]/92
-    print('Edited user input:',user_input)
+
+    # Convert age to the same scale as in the model
+    user_input[0] = user_input[0] / 92
+    #print('Edited user input:', user_input)
+
+    # Load the model and predict
     est_loaded = pickle.load(open(model_file_name, 'rb'))
-    testprob = est_loaded.predict_proba(np.array([user_input])).item((0,1))
+    testprob = est_loaded.predict_proba(np.array([user_input])).item((0, 1))
     y_predict = est_loaded.predict(np.array([user_input]))[0]
+    #print('the test prob and predicted class are:', testprob, y_predict)
+
+    # Generate output information
     if y_predict == 1:
         label = [
             'Caution! ',
@@ -24,7 +33,4 @@ def modelIt(user_input, model_file_name = 'app/data/finalized_model.sav'):
             'upper respiratory infection',
             'mild_condition.png'
         ]
-    print('the test prob and predicted class are:', testprob, y_predict)
-    #return "{0:.0f}%".format(testprob*100)
     return label
-#modelIt([1,1,1,1,1])
