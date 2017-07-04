@@ -33,5 +33,5 @@ learning_and_EDA.ipynb
 ## Web app
 Build a web app to check user's cough-related symptoms.
 ```
-website
+website/
 ```
